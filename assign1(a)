@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+
+int search(int key, int n, int array[]){
+    for (int i=0; i<n; i++){
+        if (array[i]==key){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(){
+    int array[10]={1,5,9,7,10,12,17};
+    int n=7, key;
+    cout<<"Enter key: ";
+    scanf(" %d", &key);
+    int a=search(key, n, array);
+    if (a==-1){cout<<key<<" not present in array";}
+    else {cout<<key<<" found at index "<<a;}
+    
+    
+}
